@@ -7,7 +7,9 @@ namespace SoftwareAssignment2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            TestMethod1();
+            TestMethod2();
+            TestMethod3();
         }
 
         // Input: None

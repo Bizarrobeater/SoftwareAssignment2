@@ -6,19 +6,45 @@ namespace SoftwareAssignment2
 {
     static class Fundamentals
     {
-        internal static void CountToTen()
+        public static void CountToTen()
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(i + 1);
+            }
+            Console.WriteLine("Finished!");
+
         }
 
-        internal static int Fibonacci(int v)
+        public static int Fibonacci(int nthNumber)
         {
-            throw new NotImplementedException();
+            int[] fibPair = { 0, 1 };
+            for (int i = 0; i < nthNumber; i++)
+            {
+                fibPair = new int[]{ fibPair[1], fibPair[0] + fibPair[1]};
+            }
+            return fibPair[0];
         }
 
-        internal static int CollatzSequenceLength(int v)
+        internal static int CollatzSequenceLength(int startNumber)
         {
-            throw new NotImplementedException();
+            StringBuilder sequenceBuilder = new StringBuilder();
+            int currNum = startNumber;
+            int length = 1;
+
+            while(currNum != 1)
+            {
+                sequenceBuilder.Append($"{currNum}, ");
+                length++;
+                if (currNum % 2 == 0)
+                    currNum = currNum / 2;
+                else
+                    currNum = 3 * currNum + 1;
+            }
+            sequenceBuilder.Append(currNum);
+            Console.WriteLine(sequenceBuilder.ToString());
+
+            return length;
         }
     }
 }
