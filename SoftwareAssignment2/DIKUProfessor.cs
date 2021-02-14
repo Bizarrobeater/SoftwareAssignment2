@@ -6,8 +6,8 @@ namespace SoftwareAssignment2
 {
     class DIKUProfessor : DIKUPerson
     {
-        public DIKUProfessor(string name, DIKUActivity activity)
-            : base(name, activity)
+        public DIKUProfessor(string name)
+            : base(name, DIKUActivity.AttendingAll)
         {
             MaxBrainPower = 10000;
             BrainPower = 10000;

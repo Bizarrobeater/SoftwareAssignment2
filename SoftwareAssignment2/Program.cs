@@ -7,11 +7,19 @@ namespace SoftwareAssignment2
     {
         static void Main(string[] args)
         {
-            DIKUPerson student = new DIKUStudent("Hans", DIKUActivity.AttendingAll);
-            DIKUPerson professor = new DIKUProfessor("Frank", DIKUActivity.AttendingSome);
+            DIKUPerson student1 = new DIKUStudent("John Doe", DIKUActivity.AttendingAll);
+            DIKUPerson student2 = new DIKUStudent("Jane Doe", DIKUActivity.AttendingNone);
+            DIKUPerson student3 = new DIKUStudent("Frank Buck", DIKUActivity.AttendingSome);
+            DIKUPerson professor = new DIKUStudent("Hireath Under", DIKUActivity.AttendingAll);
 
-            Console.WriteLine(student);
-            Console.WriteLine(professor);
+            Classroom storeKnirke = new Classroom();
+
+            DIKUPerson semiFinalWinner1 = storeKnirke.Discuss(student1, student2);
+            DIKUPerson semiFinalWinner2 = storeKnirke.Discuss(student3, professor);
+
+            DIKUPerson finalWinner = storeKnirke.Discuss(semiFinalWinner1, semiFinalWinner2);
+
+            Console.WriteLine($"Winner of the Final Discussion\n{finalWinner.Name.ToUpper()}");
         }
 
 

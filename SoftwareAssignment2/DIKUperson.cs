@@ -6,14 +6,14 @@ namespace SoftwareAssignment2
 {
     abstract class DIKUPerson
     {
-        public string Name { get; set; }
+        public string Name { get; init; }
             
         public int MaxBrainPower { get; protected set; }
         public int BrainPower { get; protected set; }
-        public int StrengthOfArgument { get; set; }
-        public int CounterArgument { get; set; }
-        public int DoubleArgument { get; set; }
-        public DIKUActivity Activity { get; set; }
+        public int StrengthOfArgument { get; protected set; }
+        public int CounterArgument { get; protected set; }
+        public int DoubleArgument { get; protected set; }
+        public DIKUActivity Activity { get; protected set; }
 
         private Random _random;
 
@@ -35,7 +35,7 @@ namespace SoftwareAssignment2
 
             if (CounterArgument > counterArgRoll)
             {
-                Console.WriteLine($"{Name} dodged the argument!");
+                Console.WriteLine($"{Name} has reflected the argument and suffer NO DAMAGE!!!");
                 return false;
             }
             else
@@ -55,7 +55,7 @@ namespace SoftwareAssignment2
                 argumentText = "a CRITICAL";
             }
 
-            Console.WriteLine($"{this.Name} strikes {argumentText} at {opponent.Name} for {argMultiplier * StrengthOfArgument} points of draining");
+            Console.WriteLine($"{Name} strikes {argumentText} argument at {opponent.Name} for {argMultiplier * StrengthOfArgument} points of draining");
             opponent.BeDrained(argMultiplier * StrengthOfArgument);           
         }
 
