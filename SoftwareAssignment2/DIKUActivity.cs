@@ -9,6 +9,5 @@ namespace SoftwareAssignment2
         AttendingAll,
         AttendingSome,
         AttendingNone,
-        _,
     }
 }

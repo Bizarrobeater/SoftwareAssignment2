@@ -18,6 +18,12 @@ namespace SoftwareAssignment2
             DoubleArgument = 10;
         }
 
+        public override void GetExperience()
+        {
+            Semester++;
+            base.GetExperience();
+        }
+
         public override string ToString()
         {
             return $"Name: {Name}\nActivity: {Activity}\nSemester: {Semester}\nCurrent brainpower: {BrainPower}";

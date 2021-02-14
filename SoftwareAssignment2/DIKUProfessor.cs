@@ -22,6 +22,17 @@ namespace SoftwareAssignment2
             return base.HasLost();
         }
 
+        public override bool BeDrained(int amount)
+        {
+            amount = amount / 4;
+            return base.BeDrained(amount);
+        }
+
+        public override void GetExperience()
+        {
+            Console.WriteLine("I have already finished my degree, I cannot be greater");
+        }
+
         public override string ToString()
         {
             return $"Name: {Name}\nActivity: {Activity}\nCurrent brainpower: {BrainPower}";
