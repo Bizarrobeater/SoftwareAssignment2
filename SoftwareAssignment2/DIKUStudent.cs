@@ -17,5 +17,10 @@ namespace SoftwareAssignment2
             CounterArgument = 10;
             DoubleArgument = 10;
         }
+
+        public override string ToString()
+        {
+            return $"Name: {Name}\nActivity: {Activity}\nSemester: {Semester}\nCurrent brainpower: {BrainPower}";
+        }
     }
 }

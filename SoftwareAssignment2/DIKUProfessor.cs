@@ -16,5 +16,15 @@ namespace SoftwareAssignment2
             DoubleArgument = 45;
         }
 
+        public override bool HasLost()
+        {
+            Console.WriteLine("I can not lose!");
+            return base.HasLost();
+        }
+
+        public override string ToString()
+        {
+            return $"Name: {Name}\nActivity: {Activity}\nCurrent brainpower: {BrainPower}";
+        }
     }
 }
