@@ -26,7 +26,7 @@ namespace SoftwareAssignment2
             return fibPair[0];
         }
 
-        internal static int CollatzSequenceLength(int startNumber)
+        public static int CollatzSequenceLength(int startNumber)
         {
             StringBuilder sequenceBuilder = new StringBuilder();
             int currNum = startNumber;
