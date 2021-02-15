@@ -15,13 +15,20 @@ namespace SoftwareAssignment2
         public int DoubleArgument { get; protected set; }
         public DIKUActivity Activity { get; protected set; }
 
-        private Random _random;
+        private static Random _random;
+        public static int RandomSeed { get; }
 
         public DIKUPerson(string name, DIKUActivity activity)
         {
             Name = name;
             Activity = activity;
-            _random = new Random();
+            //_random = new Random();
+        }
+
+        static DIKUPerson()
+        {
+            RandomSeed = Environment.TickCount;
+            _random = new Random(RandomSeed);
         }
 
         public virtual bool HasLost()
