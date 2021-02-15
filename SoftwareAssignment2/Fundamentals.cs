@@ -19,9 +19,13 @@ namespace SoftwareAssignment2
         public static int Fibonacci(int nthNumber)
         {
             int[] fibPair = { 0, 1 };
+            int tempPos0;
             for (int i = 0; i < nthNumber; i++)
             {
-                fibPair = new int[]{ fibPair[1], fibPair[0] + fibPair[1]};
+                tempPos0 = fibPair[0];
+                fibPair[0] = fibPair[1];
+                fibPair[1] = tempPos0 + fibPair[1];
+                
             }
             return fibPair[0];
         }
