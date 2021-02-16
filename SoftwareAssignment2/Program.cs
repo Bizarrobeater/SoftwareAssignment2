@@ -25,8 +25,9 @@ namespace SoftwareAssignment2
 
             //Classroom storeKnirke = new Classroom();
             //storeKnirke.RunDebate(studentList);
+            Console.ReadKey();
 
-            string testString = "testString";
+            string testString = "Fancy (stupid) Console Writing";
 
             FancyConsoleText.FromLeft(testString);
 

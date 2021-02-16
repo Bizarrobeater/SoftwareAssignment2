@@ -16,7 +16,8 @@ namespace SoftwareAssignment2
             string finishedText = "";
             foreach (char c in text)
             {
-                AnimateCharFromleft(finishedText, c, text.Length);
+                if (c != ' ')
+                    AnimateCharFromleft(finishedText, c, text.Length);
                 finishedText += c;
             }
         }
